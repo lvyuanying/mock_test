@@ -1,15 +1,23 @@
 {
-  "apps": [{
-    "name": "mock_service",
-    "script": "production.js",
-    "cwd": "/home/lvyuanying/Documents/work_place/mock_service",
-    "exec_mode": "fork",
-    "max_memory_restart": "1G",
-    "autorestart": true,
-    "node_args": [],
-    "args": [],
-    "env": {
-      
+  "apps": [
+    {
+      "name": "mock",
+      "script": "production.js",
+      "cwd": "/var/www/mock_test",
+      "instances": 1,
+      "exec_mode": "fork",
+      "max_memory_restart": "1G",
+      "watch": true,
+      "ignore_watch": [
+        "runtime",
+        "www/static/uploads",
+        "logs",
+        ".git"
+      ],
+      "autorestart": true,
+      "node_args": [],
+      "args": [],
+      "env": {}
     }
-  }]
+  ]
 }
