@@ -4,6 +4,7 @@ module.exports = class extends Base {
     async updateInterfaceAction (){
         let body = this.post()
 
+        console.log(body)
         let result = await this.model('project').addInterface(body)
 
         return this.success('更新成功')
