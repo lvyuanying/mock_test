@@ -1,3 +1,4 @@
 module.exports = [
-    ['/api/test_api', 'rest']
+    // ['/project/updateInterface', 'rest'],
+    [/\/api\//, 'rest']
 ];
