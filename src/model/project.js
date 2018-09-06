@@ -1,6 +1,6 @@
 module.exports = class extends think.Model {
-    async getProjectList(){
-        let project_list = await this.select()
+    async getProjectList () {
+        const project_list = await this.select()
         return project_list
     }
 
@@ -19,7 +19,7 @@ module.exports = class extends think.Model {
             name, describe, project_id, url, result: JSON.stringify(result)
         })
         
-        return 'insertId'
+        return insertId
     }
 
     async removeInterface(interface_id){
